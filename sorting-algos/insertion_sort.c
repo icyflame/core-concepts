@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Function to sort an array using insertion sort*/
 void insertionSort(int arr[], int n){
@@ -35,7 +36,8 @@ int main(int argc, const char * argv[]) {
     int number;
     printf("Enter the number of elements in the array: ");
     scanf("%d", &number);
-    int arr[number];
+    int * arr;
+    arr = (int *) malloc(sizeof(int) * number);
     printf("Enter the array to sort: ");
     for(int i=0; i< number; i++){
         scanf("%d", &arr[i]);
